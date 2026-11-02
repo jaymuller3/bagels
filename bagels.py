@@ -20,6 +20,9 @@ def printIntro():
     print("I have thought up a number.")
     print("You have " + str(MAX_GUESSES) + " guesses to get the correct number.")
 
+def printExit():
+    print("Thanks for playing!")
+
 def numberStringFormat(num):
     if num < 10:
         numStr = "00" + str(num)
@@ -128,6 +131,8 @@ def main():
         
         playAgain = input("Would you like to play again? " )
         playAgain = playAgainValidation(playAgain)
+
+    printExit()
 
 if __name__ == '__main__':
     main()
